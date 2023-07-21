@@ -8,6 +8,8 @@ export const sequelize = new Sequelize('hello', 'root', 'root', {
   dialect: 'mysql',
 });
 
+
+
 // Connect to the database and synchronize models
 export async function connectToDatabase(): Promise<void> {
   try {

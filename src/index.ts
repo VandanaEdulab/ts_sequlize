@@ -4,10 +4,8 @@ import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import { connectToDatabase } from './database';
 
-
 const app = express();
 const port = 3000;
-
 
 app.use(bodyParser.json());
 
@@ -21,6 +19,7 @@ app.use(bodyParser.json());
 //     res.status(500).json({ message: 'Internal Server Error' });
 //   }
 // });
+
 
 
 app.get('/', (req: Request, res: Response) => {
@@ -40,6 +39,7 @@ async function startServer() {
     console.error('Failed to start the server:', error);
   }
 }
+
 
 
 startServer();
