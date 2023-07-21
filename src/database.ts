@@ -5,7 +5,7 @@ import { User } from './models/Users';
 // Define Sequelize configuration
 export const sequelize = new Sequelize('hello', 'root', 'root', {
   host: 'localhost',
-  dialect: 'mysql'
+  dialect: 'mysql',
 });
 
 // Connect to the database and synchronize models
@@ -20,3 +20,6 @@ export async function connectToDatabase(): Promise<void> {
     throw error;
   }
 }
+
+// Associate the model with the Sequelize instance
+sequelize.addModels([User]);
