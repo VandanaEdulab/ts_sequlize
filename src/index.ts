@@ -20,6 +20,10 @@ app.use(bodyParser.json());
 //   }
 // });
 
+app.get('/home', (req: Request, res: Response) => {
+  res.json({ message: 'Home PAge' });
+});
+
 
 
 app.get('/', (req: Request, res: Response) => {
@@ -39,6 +43,7 @@ async function startServer() {
     console.error('Failed to start the server:', error);
   }
 }
+
 
 
 
